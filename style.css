@@ -306,3 +306,56 @@ ul a {
 .copyright {
     padding-top: 5px;
 }
+/* Add these to style.css */
+/* Hover effects */
+.nav-signin:hover, .nav-return:hover, .nav-cart:hover {
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.box {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Mobile menu */
+@media screen and (max-width: 768px) {
+    .panel-ops {
+        display: none;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        background-color: #222f3d;
+        z-index: 1000;
+        padding: 10px;
+    }
+    
+    .panel-ops.active {
+        display: block;
+    }
+    
+    .panel-ops p {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Search bar transition */
+.nav-search {
+    transition: all 0.3s ease;
+}
+
+/* Cart animation */
+.nav-cart {
+    transition: transform 0.2s ease;
+}
+
+.nav-cart:active {
+    transform: scale(0.95);
+}
